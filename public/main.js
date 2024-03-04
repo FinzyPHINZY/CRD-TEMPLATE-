@@ -32,9 +32,12 @@ async function deleteItem(id) {
   console.log(id);
   console.log("deleting item from main.js");
   try {
-    const response = await fetch(`http://localhost:3500/item/delete/${id}`, {
-      method: "DELETE",
-    });
+    const response = await fetch(
+      `https://crud-template.onrender.com/item/delete/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
     if (response.ok) {
       location.reload();
       console.log("Deleting item was successful");

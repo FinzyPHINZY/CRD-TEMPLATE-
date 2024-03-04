@@ -18,7 +18,7 @@ mongoose
     console.log(`FAILURE: Connection to MongoDB failed. Error: ${err}`)
   );
 
-// app.use(morgan("tiny"));
+app.use(morgan("tiny"));
 app.use(cors());
 app.use(express.static("public"));
 app.use(express.json());
@@ -86,6 +86,6 @@ app.delete("/item/delete/:id", async (req, res) => {
 // Start the server
 app.listen(PORT, () => {
   console.log(
-    `Server is running on https://localhost:${PORT}...Betta go catch it! `
+    `Server is running on https://crud-template.onrender.com/ ...Betta go catch it! `
   );
 });
