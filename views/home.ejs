@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD TEMPLATE</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <%- include('partials/header.ejs') %>
+        <h1>Welcome to KittenLAnd!</h1>
+        <p>Your Ultimate Source for All Things Food🍴</p>
+      </header>
+      <div id="carousel">
+        <img src="/assets/food1.avif" alt="Mouth watering meal" />
+        <img src="/assets/food2.avif" alt="Mouth watering meal" />
+        <img src="/assets/food3.avif" alt="Mouth watering meal" />
+        <img src="/assets/food4.avif" alt="Mouth watering meal" />
+        <img src="/assets/food5.avif" alt="Mouth watering meal" />
+        <img src="/assets/food6.avif" alt="Mouth watering meal" />
+        <img src="/assets/food7.avif" alt="Mouth watering meal" />
+        <img src="/assets/food8.avif" alt="Mouth watering meal" />
+        <img src="/assets/food9.avif" alt="Mouth watering meal" />
+        <img src="/assets/food10.avif" alt="Mouth watering meal" />
+      </div>
+
+      <section id="why-kittens">
+        <h2>Why Kittens?</h2>
+        <p>
+          Kittens are more than just adorable balls of fluff; they are tiny,
+          playful, and inquisitive companions that bring joy and happiness to
+          any household. Whether you're a first-time kitten owner or a seasoned
+          feline enthusiast, you've come to the right place!
+        </p>
+      </section>
+
+      <section id="offer">
+        <h2>What We Offer</h2>
+        <ul>
+          <li>
+            Kitten Care Guides: Learn how to take care of your new feline friend
+            from day one!
+          </li>
+          <li>
+            Adoption Tips: Get expert advice on choosing the perfect kitten for
+            your lifestyle.
+          </li>
+          <li>
+            Product Reviews: Discover the best toys, accessories, and food for
+            your little furball.
+          </li>
+          <li>
+            Photo Galleries: Feast your eyes on the cutest kittens from around
+            the world!
+          </li>
+        </ul>
+      </section>
+
+      <section id="latest-posts">
+        <h2>Latest Blog Posts</h2>
+        <ol>
+          <li>"The First 30 Days with Your New Kitten"</li>
+          <li>"How to Kitten-Proof Your Home"</li>
+          <li>"Best DIY Toys for Kittens"</li>
+        </ol>
+      </section>
+
+      <section id="testimonials">
+        <h2>Testimonials</h2>
+        <blockquote>
+          <p>
+            "KittenLand is my go-to resource for everything kitten-related. The
+            care guides are incredibly helpful!"
+          </p>
+          <footer>— Jane D., Proud Kitten Owner</footer>
+        </blockquote>
+        <blockquote>
+          <p>
+            "I adopted my first kitten last month, and the tips on this website
+            have been a lifesaver!"
+          </p>
+          <footer>— Mark S., New Kitten Parent</footer>
+        </blockquote>
+      </section>
+
+      <section id="get-involved">
+        <h2>Get Involved</h2>
+        <p>
+          Join our community of kitten lovers! Follow us on social media,
+          subscribe to our newsletter, or contribute to our blog. We'd love to
+          have you as part of the KittenLand family!
+        </p>
+      </section>
+
+      <footer><%- include('partials/footer.ejs') %></footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+/* Box sizing rules */
+/* Remove default margin */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  padding: 0;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility Classes */
+.container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* Typography */
+li {
+  text-transform: capitalize;
+}
+
+/* Navbar styling */
+.navbar,
+footer ul {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Navbar list */
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar items */
+.nav-item {
+  float: left;
+}
+
+/* Navbar links */
+.nav-link {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.nav-link:hover {
+  background-color: #555;
+  color: white;
+}
+
+header,
+footer {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 20px;
+}
+
+.sub-header {
+  font-size: 1.2em;
+}
+
+h2 {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+ul,
+ol {
+  margin-left: 20px;
+}
+
+blockquote {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Carousel styling */
+#carousel {
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  margin: auto;
+}
+
+#carousel img {
+  width: 100%;
+  height: 100%; /* Changed from auto */
+  object-fit: contain; /* Make the image fit within the dimensions */
+  display: none; /* Hide images by default */
+}
+
+#carousel img.active {
+  display: block; /* Show active image */
+}
