@@ -4,19 +4,13 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const morgan = require("morgan");
 const Item = require("./models/Item");
-const PORT = process.env.PORT || 2121;
+const PORT = process.env.PORT || 3500;
+const connectDB = require("./config/database");
 
 const app = express();
 
 // Connect to MongoDB with mongoose
-mongoose
-  .connect(
-    `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.0ymvjos.mongodb.net/${process.env.DATABASE_NAME}?retryWrites=true&w=majority&appName=Cluster0`
-  )
-  .then(() => console.log("SUCCESS: Connected to MongoDB successfully"))
-  .catch((err) =>
-    console.log(`FAILURE: Connection to MongoDB failed. Error: ${err}`)
-  );
+connectDB();
 
 app.use(morgan("tiny"));
 app.use(cors());
@@ -86,6 +80,6 @@ app.delete("/item/delete/:id", async (req, res) => {
 // Start the server
 app.listen(PORT, () => {
   console.log(
-    `Server is running on https://crud-template.onrender.com/ ...Betta go catch it! `
+    `Server is running on https://crud-template.onrender.com/ ...Betta go catch it! ${PORT}`
   );
 });
